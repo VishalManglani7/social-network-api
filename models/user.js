@@ -19,11 +19,11 @@ const usernameSchema = new Schema(
     },
     thoughts: [{
         type: Schema.Types.ObjectId,
-        ref: 'thought'}
+        ref: 'Thought'}
     ],
     friends: [{
         type: Schema.Types.ObjectId,
-        ref: 'user'}
+        ref: 'User'}
     ],
   },
   {
@@ -36,6 +36,6 @@ const usernameSchema = new Schema(
 // Create a virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
 
 
-const user = model('user', usernameSchema);
+const User = model('User', usernameSchema);
 
-module.exports = user;
+module.exports = User;
