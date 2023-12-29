@@ -27,9 +27,12 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ```
 
 ## Visuals
+[https://drive.google.com/file/d/1SE0NW_CrQOq0vJXhRV7KrwuDAqtHnL8j/view](GoogleDriveWalkthrough)
 
-License
+## License
+
 MIT
 
-Project Status
+## Project Status
+
 This project will be revisited as functionality of adding friends and liking thoughts needs to be built out.
