@@ -24,6 +24,8 @@ module.exports = {
     User
       .findOne({ _id: req.params.userId })
       .select("-__v")
+      .populate("friends")
+      .populate("thoughts")
       .then((user) =>
         !user
           ? res.status(404).json({ message: "No user with that ID" })
@@ -39,7 +41,7 @@ module.exports = {
       { runValidators: true, new: true }
     )
       .then((user) =>
-        !thought
+        !user
           ? res.status(404).json({ message: 'No user with this id!' })
           : res.json(user)
       )
@@ -49,7 +51,7 @@ module.exports = {
   //delete user
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.userId })
-      .then(() => res.json({ message: 'User deleted!' }))
+      .then(() => res.json({ message: ' deleted!' }))
       .catch((err) => res.status(500).json(err));
   },
 };
